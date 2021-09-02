@@ -1,0 +1,162 @@
+<div class="box style-4">
+
+  <div class="heading">Rename Labels in Checkout Section</div>
+
+  <div class="description my-3">You can change the labels for the fields related to partial payments.</div>
+
+
+  <div class="heading my-3">Original vs Customized Checkout Section</div>
+
+  <div class="row">
+    <div class="col-6">
+      <div class="demo-image-title">Original Checkout Partial Payment Field Labels</div>
+    </div>
+
+    <div class="col-6">
+      <div class="demo-image-title">Customized Checkout Partial Payment Field Labels</div>
+    </div>
+  </div>
+  <div class="row mb-1">
+    <div class="col-6">
+        <img class="demo-images" src="/assets/images/partial-payments-fields.png">
+
+    </div>
+    <div class="col-6">
+
+        <img class="demo-images" src="/assets/images/partial-payments-fields-customized.png">
+
+    </div>
+  </div>
+
+  <div class="row description mb-5 px-3 py-2">
+    Razorpay supports the display of labels in different languages.
+  </div>
+
+
+  <hr>
+
+  <div class="description my-5 p-2" style="border-left: 3px solid #ffa726; background-color: #fff6e9;">When you enable partial payments for a Payment Link, the following fields appear in the payment request page:
+
+    <ul>
+      <li><span class="code" style="line-height: 2;">Pay in full</span></li>
+      <li><span class="code" style="line-height: 2;">Make payments in parts</span></li>
+      <li><span class="code" style="line-height: 2;">Pay some now and the remaining later</span></li>
+      <li><span class="code" style="line-height: 2;">Minimum first amount</span></li>
+    </ul>
+
+    <div class="my-2">You can replace the labels for these fields with custom labels that are specific to your business use case. You may even display labels in a different language.</div>
+</div>
+
+  <hr>
+
+
+
+  <div class="heading my-3">
+    Request Parameters
+  </div>
+
+  <div class="description my-3">List of request parameters to be used with the Create Payment Link API to rename labels of fields related to partial payments.</div>
+
+  <div class="row main-option m-1 mb-5" style="border-left: 3px solid #286ae8; background-color: #dae6ff;">
+
+    <div class="col-5">
+      <div class="font-key">options</div>
+      <div class="value-type">mandatory</div>
+    </div>
+    <div class="col-7 lh-2">
+      <span class="code">array</span> Options to rename the labels for partial payment fields in the checkout form. Parent parameter under which the <span class="code">checkout</span> and <span class="code">partial_payment</span> child parameters must be passed.
+    </div>
+
+    <!-- ---------------------------------------------------------------------------------- -->
+    <div class="row sub-options" style="border-left: 3px solid #9e850c; background-color: #fff5c5;">
+      <div class="col-5">
+        <div class="font-key">checkout</div>
+        <div class="value-type">mandatory</div>
+      </div>
+
+      <div class="col-7 lh-2">
+        <span class="code">array</span> The parameter for the Checkout section. <span class="code">partial_payment</span> is its child parameter.
+      </div>
+
+      <!-- ------------------------------------------------------------------------------------ -->
+      <div class="row sub-options" style="border-left: 3px solid #0b6a05; background-color: #e1ffdf;">
+
+        <div class="col-5">
+          <div class="font-key">accept_partial</div>
+        </div>
+
+        <div class="col-7">
+          <span class="code">array</span> Modifies labels of fields related to partial payments.
+          <ul>
+            <li><span class="code">netbanking</span></li>
+            <li><span class="code">upi</span></li>
+            <li><span class="code">card</span></li>
+            <li><span class="code">wallet</span></li>
+          </ul>
+        </div>
+
+        <!-- ---------------------------------------------------------------------------------- -->
+        <div class="row sub-options" style="border-left: 3px solid #ffa726;background-color: #fff6e9;">
+
+          <div class="col-5">
+            <div class="font-key">min_amount_label</div>
+            <div class="value-type">optional</div>
+          </div>
+
+          <div class="col-7 lh-2">
+            <span class="code">string</span> Changes the label for the <span class="code">Minimum first amount</span> field.
+
+          </div>
+        </div>
+
+        <div class="row sub-options" style="border-left: 3px solid #ffa726;background-color: #fff6e9;">
+
+          <div class="col-5">
+            <div class="font-key">partial_amount_label</div>
+            <div class="value-type">optional</div>
+          </div>
+
+          <div class="col-7 lh-2">
+            <span class="code">string</span> Changes the label for the <span class="code">Make payment in parts</span> field.
+          </div>
+        </div>
+
+        <div class="row sub-options" style="border-left: 3px solid #ffa726;background-color: #fff6e9;">
+
+          <div class="col-5">
+            <div class="font-key">partial_amount_description</div>
+            <div class="value-type">optional</div>
+          </div>
+
+          <div class="col-7 lh-2">
+            <span class="code">string</span> Changes the label for the <span class="code">Pay some now and the remaining later</span> field.
+          </div>
+        </div>
+
+        <div class="row sub-options" style="border-left: 3px solid #ffa726;background-color: #fff6e9;">
+
+          <div class="col-5">
+            <div class="font-key">full_amount_label</div>
+            <div class="value-type">optional</div>
+          </div>
+
+          <div class="col-7 lh-2">
+            <span class="code">string</span> Changes the label for the <span class="code">Pay in full</span> field.
+          </div>
+        </div>
+
+        <!-- ----------------------------------------------------------------------------------------------- -->
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="code-block">
+    <pre>{{options}}</pre>
+  </div>
+
+
+
+
+</div>

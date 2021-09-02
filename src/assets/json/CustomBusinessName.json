@@ -1,0 +1,35 @@
+[{
+  "amount": 1000,
+  "currency": "INR",
+  "accept_partial": true,
+  "first_min_partial_amount": 100,
+  "expire_by": 1691097057,
+  "reference_id": "#test",
+  "description": "Payment for policy no #23456",
+  "customer": {
+      "name": "Gaurav Kumar",
+      "contact": "+919999999999",
+      "email": "gaurav.kumar@example.com"
+  },
+  "notify": {
+      "sms": true,
+      "email": true
+  },
+  "reminder_enable": true,
+
+  "options": {
+      "checkout": {
+          "name": "Acme Corp"
+         }
+      }
+
+},
+{
+	"type":"POST",
+	"endpoint":"https://api.razorpay.com/v1/payment_links/",
+  "endpoint_edit" : false,
+  "json_body_edit" : true,
+  "id_editpoint_position":-1
+
+}
+]

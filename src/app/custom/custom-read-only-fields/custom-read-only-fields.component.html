@@ -1,0 +1,122 @@
+<div class="box style-4">
+
+  <div class="heading">Set Checkout Fields as Read-Only</div>
+
+  <div class="description my-3">You can set Checkout fields such as contact and email as read-only. This prevents the customers from editing their contact numbers and email addresses on Checkout.</div>
+
+
+  <div class="heading my-3">Original vs Customized Checkout Section</div>
+
+  <div class="row">
+    <div class="col-6">
+      <div class="demo-image-title">Original Checkout Fields</div>
+    </div>
+
+    <div class="col-6">
+      <div class="demo-image-title">Customized Read-only Checkout Fields</div>
+    </div>
+  </div>
+  <div class="row mb-5">
+    <div class="col-6">
+        <img class="demo-images" src="/assets/images/read_edit_fields.png">
+
+    </div>
+    <div class="col-6">
+
+        <img class="demo-images" src="/assets/images/read_only_fields.png">
+
+    </div>
+  </div>
+
+  <hr>
+
+
+
+
+  <div class="heading my-3">
+    Request Parameters
+  </div>
+
+  <div class="description my-3">List of request parameters to be used with the Create Payment Link API to make <span class="code">contact</span> and <span class="code">email</span> fields non-editable.</div>
+
+  <div class="row main-option m-1 mb-5" style="border-left: 3px solid #286ae8; background-color: #dae6ff;">
+
+    <div class="col-4">
+      <div class="font-key">options</div>
+      <div class="value-type">mandatory</div>
+    </div>
+    <div class="col-8 lh-2">
+      <span class="code">array</span> Options to set <span class="code">contact</span> and <span class="code">email</span> as read-only fields on Checkout. Parent parameter under which the <span class="code">checkout</span> and <span class="code">readonly</span> child parameters must be passed.
+    </div>
+
+    <!-- ---------------------------------------------------------------------------------- -->
+    <div class="row sub-options" style="border-left: 3px solid #9e850c; background-color: #fff5c5;">
+      <div class="col-4">
+        <div class="font-key">checkout</div>
+        <div class="value-type">mandatory</div>
+      </div>
+
+      <div class="col-8 lh-2">
+        <span class="code">array</span> The parameter for the Checkout section. <span class="code">readonly</span> is its child parameter.
+      </div>
+
+      <!-- ------------------------------------------------------------------------------------ -->
+      <div class="row sub-options" style="border-left: 3px solid #0b6a05; background-color: #e1ffdf;">
+
+        <div class="col-4">
+          <div class="font-key">readonly</div>
+        </div>
+
+        <div class="col-8 lh-2">
+          <span class="code">array</span> Marks fields as read-only.
+        </div>
+
+        <!-- ---------------------------------------------------------------------------------- -->
+        <div class="row sub-options" style="border-left: 3px solid #ffa726;background-color: #fff6e9;">
+
+          <div class="col-4">
+            <div class="font-key">contact</div>
+            <div class="value-type">optional</div>
+          </div>
+
+          <div class="col-8 lh-2">
+            <span class="code">boolean</span> Used to set the <span class="code">contact</span> field as readonly. Possible values:
+            <ul>
+              <li><span class="code">1</span> - Customer will not be able to edit this field.</li>
+              <li><span class="code">0</span> (default) - Customer will be able to edit this field.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row sub-options" style="border-left: 3px solid #ffa726;background-color: #fff6e9;">
+
+          <div class="col-4">
+            <div class="font-key">email</div>
+            <div class="value-type">optional</div>
+          </div>
+
+          <div class="col-8 lh-2">
+            <span class="code">boolean</span> Used to set the <span class="code">email</span> field as readonly. Possible values:
+            <ul>
+              <li><span class="code">1</span> - Customer will not be able to edit this field.</li>
+              <li><span class="code">0</span> (default) - Customer will be able to edit this field.</li>
+            </ul>
+          </div>
+        </div>
+
+
+        <!-- ----------------------------------------------------------------------------------------------- -->
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="code-block">
+    <pre>{{options}}</pre>
+  </div>
+
+
+
+
+</div>

@@ -1,0 +1,19 @@
+<div class="heading">Error Dictionary</div>
+
+
+
+<ng-container *ngFor="let qa of faqs, index as i" >
+  <div class="qa" (click)="activate(i)">
+
+    <div class="question">
+      {{i+1}}. {{qa[0]}}
+    </div>
+
+
+    <div class="answer mb-3" *ngIf="activated==i">
+      {{qa[1]}}
+    </div>
+
+  </div>
+</ng-container>
+

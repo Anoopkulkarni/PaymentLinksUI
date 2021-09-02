@@ -1,0 +1,176 @@
+<div class="box style-4">
+
+  <div class="heading">Customize Payment Methods</div>
+
+  <div class="description my-3">You can configure the payment methods of your choice on the Checkout section of the Payment Links to provide a highly personalized experience for your customers.</div>
+
+
+  <div class="heading my-3">Original vs Customized Checkout</div>
+
+  <div class="row">
+    <div class="col-6">
+      <div class="demo-image-title">Original Checkout</div>
+    </div>
+
+    <div class="col-6">
+      <div class="demo-image-title">Customized Checkout</div>
+    </div>
+  </div>
+  <div class="row mb-5">
+    <div class="col-6">
+        <img class="demo-images" src="/assets/images/original_payment_methods.png">
+
+    </div>
+    <div class="col-6">
+
+        <img class="demo-images" src="/assets/images/custom_payment_methods.png">
+
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="description my-5 p-2" style="border-left: 3px solid #ffa726; background-color: #fff6e9;">There are two ways to customize the appearance of payment methods:
+    <ul>
+      <li><strong>Using <span class="code">options</span> and <span class="code">method</span> Parameters</strong></li>
+      <div class="description mb-2" >You can enable or disable display of specific payment methods. For example, you can use the <span class="code">options</span> and <span class="code">method</span> parameters to display only card and netbanking methods on the Checkout.</div>
+
+
+      <li><strong>Using <span class="code">options</span> and <span class="code">config</span> Parameters</strong></li>
+      <div class="description">You can provide a more personalized Checkout experience by displaying specific payment methods and instruments to customers. You can:</div>
+      <ol type="a">
+        <li>Remove an instrument from within a method - For example, hide HDFC bank from netbanking.</li>
+        <li>Highlight a particular method or instrument - For example, highlight Amazon Pay wallet and ICICI Netbanking.</li>
+        <li>Reorder instruments - For example, make UPI to appear on top of the payment methods list instead of Cards.</li>
+      </ol>
+    </ul>
+</div>
+
+  <hr>
+
+
+
+  <div class="heading my-3">
+    Request Parameters
+  </div>
+
+  <div class="description my-3">List of request parameters to be used with the Create Payment Link API to display specific payment methods.</div>
+
+  <div class="row main-option m-1 mb-5" style="border-left: 3px solid #286ae8; background-color: #dae6ff;">
+
+    <div class="col-4">
+      <div class="font-key">options</div>
+      <div class="value-type">mandatory</div>
+    </div>
+    <div class="col-8 lh-2">
+      <span class="code">array</span> Options to display or hide payment methods on the Checkout section. Parent parameter under which the <span class="code">checkout</span> and <span class="code">method</span> child parameters must be passed.
+    </div>
+
+    <!-- ---------------------------------------------------------------------------------- -->
+    <div class="row sub-options" style="border-left: 3px solid #9e850c; background-color: #fff5c5;">
+      <div class="col-4">
+        <div class="font-key">checkout</div>
+        <div class="value-type">mandatory</div>
+      </div>
+
+      <div class="col-8 lh-2">
+        <span class="code">array</span> The parameter for the Checkout section. <span class="code">method</span> is its child parameter.
+      </div>
+
+      <!-- ------------------------------------------------------------------------------------ -->
+      <div class="row sub-options" style="border-left: 3px solid #0b6a05; background-color: #e1ffdf;">
+
+        <div class="col-4">
+          <div class="font-key">method</div>
+          <div class="value-type">mandatory</div>
+        </div>
+
+        <div class="col-8 lh-2">
+          <span class="code">array</span> Using this parameter, you can control the display of payment methods on the Checkout section. Possible values of the payment methods are:
+          <ul>
+            <li><span class="code">netbanking</span></li>
+            <li><span class="code">upi</span></li>
+            <li><span class="code">card</span></li>
+            <li><span class="code">wallet</span></li>
+          </ul>
+        </div>
+
+        <!-- ---------------------------------------------------------------------------------- -->
+        <div class="row sub-options" style="border-left: 3px solid #ffa726;background-color: #fff6e9;">
+
+          <div class="col-4">
+            <div class="font-key">netbanking</div>
+          </div>
+
+          <div class="col-8 lh-2">
+            <span class="code">boolean</span> Used to enable or disable <span class="code">netbanking</span> as a payment method on the Checkout section. Possible values are:
+            <ul>
+              <li><span class="code">1</span> (default) - Displays netbanking on the Checkout.</li>
+              <li><span class="code">0</span> - Hides netbanking on the Checkout.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row sub-options" style="border-left: 3px solid #ffa726;background-color: #fff6e9;">
+
+          <div class="col-4">
+            <div class="font-key">upi</div>
+          </div>
+
+          <div class="col-8 lh-2">
+            <span class="code">boolean</span> Used to enable or disable <span class="code">UPI</span> as a payment method on the Checkout section. Possible values are:
+            <ul>
+              <li><span class="code">1</span> (default) - Displays UPI on the Checkout.</li>
+              <li><span class="code">0</span> - Hides UPI on the Checkout.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row sub-options" style="border-left: 3px solid #ffa726;background-color: #fff6e9;">
+
+          <div class="col-4">
+            <div class="font-key">card</div>
+            <div class="value-type">optional</div>
+          </div>
+
+          <div class="col-8 lh-2">
+            <span class="code">boolean</span> Used to enable or disable <span class="code">card</span> as a payment method on the Checkout section. Possible values are:
+            <ul>
+              <li><span class="code">1</span> (default) - Displays card on the Checkout.</li>
+              <li><span class="code">0</span> - Hides card on the Checkout.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row sub-options" style="border-left: 3px solid #ffa726;background-color: #fff6e9;">
+
+          <div class="col-4">
+            <div class="font-key">wallet</div>
+            <div class="value-type">optional</div>
+          </div>
+
+          <div class="col-8 lh-2">
+            <span class="code">boolean</span> Used to enable or disable <span class="code">wallet</span> as a payment method on the Checkout section. Possible values are:
+
+            <ul>
+              <li><span class="code">1</span> (default) - Displays wallet on the Checkout.</li>
+              <li><span class="code">0</span> - Hides wallet on the Checkout.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ----------------------------------------------------------------------------------------------- -->
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="code-block">
+    <pre>{{options}}</pre>
+  </div>
+
+
+
+
+</div>

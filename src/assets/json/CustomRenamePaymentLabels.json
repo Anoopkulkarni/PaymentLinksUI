@@ -1,0 +1,48 @@
+[{
+  "amount": 1000,
+  "currency": "INR",
+  "accept_partial": true,
+  "first_min_partial_amount": 100,
+  "expire_by": 1691097057,
+  "reference_id": "#test",
+  "description": "Payment for policy no #23456",
+  "customer": {
+      "name": "Gaurav Kumar",
+      "contact": "+919999999999",
+      "email": "gaurav.kumar@example.com"
+  },
+  "notify": {
+      "sms": true,
+      "email": true
+  },
+  "reminder_enable": true,
+
+  "options": {
+    "hosted_page": {
+        "label": {
+            "receipt": "Ref No.",
+            "description": "Course Name",
+            "amount_payable": "Course Fee Payable",
+            "amount_paid": "Course Fee Paid",
+            "partial_amount_due": "Fee Installment Due",
+            "partial_amount_paid": "Fee Installment Paid",
+            "expire_by": "Pay Before",
+            "expired_on": "Link Expired. Please contact Admin",
+            "amount_due": "Course Fee Due"
+        },
+        "show_preferences": {
+            "issued_to": false
+        }
+    }
+  }
+
+},
+{
+	"type":"POST",
+	"endpoint":"https://api.razorpay.com/v1/payment_links/",
+  "endpoint_edit" : false,
+  "json_body_edit" : true,
+  "id_editpoint_position":-1
+
+}
+]

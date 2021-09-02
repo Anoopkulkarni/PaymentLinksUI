@@ -1,0 +1,78 @@
+<div class="box style-4">
+
+  <div class="heading">Change Business Name</div>
+
+  <div class="description my-3">You can change the business name that appears on the Checkout section of the Payment Link's payment request page.</div>
+
+  <hr>
+
+  <div class="heading my-3">Original vs Customized Checkout</div>
+
+  <div class="row">
+    <div class="col-6">
+      <div class="demo-image-title">Normal Checkout</div>
+    </div>
+
+    <div class="col-6">
+      <div class="demo-image-title">Customized Checkout</div>
+    </div>
+  </div>
+  <div class="row mb-5">
+    <div class="col-6">
+        <img class="demo-images" src="/assets/images/old_merchant_name.png">
+
+    </div>
+    <div class="col-6">
+
+        <img class="demo-images" src="/assets/images/change_name_description.png">
+
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="heading my-3">
+    Request Parameters
+  </div>
+
+  <div class="description my-3">List of request parameters to be used with the Create Payment Link API to customize your business name.</div>
+
+  <div class="row main-option m-1 mb-5" style="border-left: 3px solid #286ae8; background-color: #dae6ff;">
+
+    <div class="col-4 font-key" >options</div>
+    <div class="col-8 lh-2"><span class="code">array</span> Option to customize the business name. Parent parameter under which the <span class="code">checkout</span> child parameter must be passed.</div>
+
+    <div class="row sub-options" style="border-left: 3px solid #9e850c; background-color: #fff5c5;">
+      <div class="col-4">
+        <div class="font-key">checkout</div>
+        <div class="value-type">mandatory</div>
+      </div>
+
+      <div class="col-8 lh-2"><span class="code">array</span> The parameter for the checkout section. <span class="code">name</span> and <span class="code">description</span> are its children.</div>
+
+      <div class="row sub-options" style="border-left: 3px solid #0b6a05; background-color: #e1ffdf;">
+
+        <div class="col-4">
+          <div class="font-key">name</div>
+          <div class="value-type">optional</div>
+        </div>
+
+        <div class="col-8 lh-2"><span class="code">string</span> Used to change the business name that appears on the Checkout section of the Payment Link's payment request page.</div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+    <div class="code-block">
+      <pre>{{options}}</pre>
+
+    </div>
+
+
+
+
+
+</div>

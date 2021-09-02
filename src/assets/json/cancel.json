@@ -1,0 +1,12 @@
+[{},
+{
+	"type":"POST",
+	"endpoint":"https://api.razorpay.com/v1/payment_links/:id/cancel",
+  "endpoint_edit" : true,
+  "json_body_edit" : false,
+  "endpoint_edit_info" : "add payment id [/payment-links/:id/cancel]",
+  "color":"#2b3e50",
+  "bg_light":"#2b3e501a",
+  "border":"#2b3e5099",
+  "id_editpoint_position":5
+}]

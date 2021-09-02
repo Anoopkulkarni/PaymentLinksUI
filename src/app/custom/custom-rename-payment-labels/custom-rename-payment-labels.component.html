@@ -1,0 +1,199 @@
+<div class="box style-4">
+
+  <div class="heading">Rename Labels in Payment Details Section</div>
+
+  <div class="description my-3">You can change the labels for fields on the Payment Details section of the Payment Link's payment request page. Instead, you can give custom labels that are specific to your business use case. You may even display labels in a different language.</div>
+
+
+  <div class="heading my-3">Original vs Customized Payment Details Section</div>
+
+  <div class="row">
+    <div class="col-6">
+      <div class="demo-image-title">Original Payment Details Section</div>
+    </div>
+
+    <div class="col-6">
+      <div class="demo-image-title">Customized Payment Details Section</div>
+    </div>
+  </div>
+  <div class="row mb-1">
+    <div class="col-6">
+        <img class="demo-images" src="/assets/images/original_pl.png">
+    </div>
+    <div class="col-6">
+        <img class="demo-images" src="/assets/images/payment_details_customized_vern.png">
+    </div>
+  </div>
+  <div class="row description mb-5 px-3 py-2">
+    Razorpay supports the display of labels in different languages.
+  </div>
+
+
+  <hr>
+
+  <div class="description my-5 p-2" style="border-left: 3px solid #ffa726; background-color: #fff6e9;">
+    Given below is the list of fields for which you can rename labels.
+    <ul style="line-height: 2;">
+      <li>PAYMENT FOR</li>
+      <li>RECEIPT NO.</li>
+      <li>AMOUNT PAYABLE</li>
+      <li>EXPIRES ON</li>
+      <li>EXPIRED ON</li>
+      <li>DUE</li>
+      <li>PAID</li>
+      <li>AMOUNT PAID</li>
+      <li>ISSUED TO</li>
+
+    </ul>
+</div>
+
+  <hr>
+
+
+
+  <div class="heading my-3">
+    Request Parameters
+  </div>
+
+  <div class="description my-3">List of request parameters to be used with the Create Payment Link API to customize the labels in the Payment Details section.</div>
+
+  <div class="row main-option m-1 mb-5" style="border-left: 3px solid #286ae8; background-color: #dae6ff;">
+
+    <div class="col-4">
+      <div class="font-key">options</div>
+      <div class="value-type">mandatory</div>
+    </div>
+    <div class="col-8 lh-2">
+      <span class="code">array</span> Parent parameter under which the <span class="code">hosted_page</span> and <span class="code">label</span> child parameters must be passed.
+    </div>
+
+    <!-- ---------------------------------------------------------------------------------- -->
+    <div class="row sub-options" style="border-left: 3px solid #9e850c; background-color: #fff5c5;">
+      <div class="col-4">
+        <div class="font-key">hosted_page</div>
+        <div class="value-type">mandatory</div>
+      </div>
+
+      <div class="col-8 lh-2">
+        <span class="code">array</span> The parameter for the Payment Details section. <span class="code">label</span> is its child parameter.
+      </div>
+
+      <!-- ------------------------------------------------------------------------------------ -->
+      <div class="row sub-options" style="border-left: 3px solid #0b6a05; background-color: #e1ffdf;">
+
+        <div class="col-4">
+          <div class="font-key">label</div>
+          <!-- <div class="value-type">mandatory</div> -->
+        </div>
+
+        <div class="col-8 lh-2">
+          <span class="code">array</span> Modifies the labels of fields in the Paymetnt Details section.
+        </div>
+
+        <!-- ---------------------------------------------------------------------------------- -->
+        <div class="row sub-options" style="border-left: 3px solid #ffa726;background-color: #fff6e9;">
+
+          <div class="col-4">
+            <div class="font-key">description</div>
+          </div>
+
+          <div class="col-8 lh-2">
+            <span class="code">string</span> Changes the label for <span class="code">PAYMENT FOR</span>
+          </div>
+        </div>
+
+        <div class="row sub-options" style="border-left: 3px solid #ffa726;background-color: #fff6e9;">
+
+          <div class="col-4">
+            <div class="font-key">receipt</div>
+          </div>
+
+          <div class="col-8 lh-2">
+            <span class="code">string</span> Changes the label for <span class="code">RECEIPT NO.</span>
+          </div>
+        </div>
+
+
+        <div class="row sub-options" style="border-left: 3px solid #ffa726;background-color: #fff6e9;">
+
+          <div class="col-4">
+            <div class="font-key">expire_by</div>
+          </div>
+
+          <div class="col-8 lh-2">
+            <span class="code">string</span> Changes the label for <span class="code">EXPIRES ON</span>. This appears when an expiry date is set for the Payment Link.
+          </div>
+        </div>
+
+        <div class="row sub-options" style="border-left: 3px solid #ffa726;background-color: #fff6e9;">
+
+          <div class="col-4">
+            <div class="font-key">expired_on</div>
+          </div>
+
+          <div class="col-8 lh-2">
+            <span class="code">string</span> Changes the label for <span class="code">EXPIRED ON</span>. This appears when the Payment Link has expired.
+          </div>
+        </div>
+
+        <div class="row sub-options" style="border-left: 3px solid #ffa726;background-color: #fff6e9;">
+
+          <div class="col-4">
+            <div class="font-key">amount_payable</div>
+          </div>
+
+          <div class="col-8 lh-2">
+            <span class="code">string</span> Changes the label for <span class="code">AMOUNT PAYABLE</span>.
+          </div>
+        </div>
+
+        <div class="row sub-options" style="border-left: 3px solid #ffa726;background-color: #fff6e9;">
+
+          <div class="col-4">
+            <div class="font-key">partial_amount_due</div>
+          </div>
+
+          <div class="col-8 lh-2">
+            <span class="code">string</span> Changes the label for <span class="code">DUE</span>. This appears when a partial payment is made on a Payment Link.
+          </div>
+        </div>
+
+        <div class="row sub-options" style="border-left: 3px solid #ffa726;background-color: #fff6e9;">
+
+          <div class="col-4">
+            <div class="font-key">partial_amount_paid</div>
+          </div>
+
+          <div class="col-8 lh-2">
+            <span class="code">string</span> Change the label for <span class="code">PAID</span>. This appears when a partial payment is made on a Payment Link.
+          </div>
+        </div>
+
+        <div class="row sub-options" style="border-left: 3px solid #ffa726;background-color: #fff6e9;">
+
+          <div class="col-4">
+            <div class="font-key">amount_paid</div>
+          </div>
+
+          <div class="col-8 lh-2">
+            <span class="code">string</span> Changes the label for <span class="code">AMOUNT PAID</span>. This appears when a full payment has been made against the Payment Link.
+          </div>
+        </div>
+
+
+
+        <!-- ----------------------------------------------------------------------------------------------- -->
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="code-block">
+    <pre>{{options}}</pre>
+  </div>
+
+
+
+
+</div>

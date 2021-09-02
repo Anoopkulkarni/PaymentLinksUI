@@ -1,0 +1,16 @@
+[{
+    "reference_id": "TS35",
+    "expire_by": 1653347540,
+    "reminder_enable":false,
+    "notes":{
+      "policy_name": "Jeevan Saral"
+    }
+},
+{
+	"type":"PATCH",
+	"endpoint":"https://api.razorpay.com/v1/payment_links/",
+  "endpoint_edit" : true,
+  "endpoint_edit_info" : "Add Payment id to endpoint to update details of a particular Payment Link.",
+  "json_body_edit" : true,
+  "id_editpoint_position":5
+}]

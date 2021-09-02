@@ -1,0 +1,27 @@
+.heading{
+  color: #373737;
+    padding: 3px 2%;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.question{
+  color: #373737;
+    padding: 3px 2%;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.answer{
+  color: #373737;
+    padding: 3px 4%;
+    font-size: 16px;
+    font-weight: 100;
+}
+
+.qa{
+  border-left: 3px solid #286ae8;
+  /* background-color: #dae6ff; */
+  margin:30px 40px;
+  cursor: pointer;
+}
